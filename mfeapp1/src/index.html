@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Mfeapp1</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script>
+    function addMFE() {
+      let hostname = "";
+      console.log("Hostname", location.hostname);
+      console.log("Window Hostname", window.location.origin);
+      hostname = "http://127.0.0.1:8080";
+      let mfeRuntime = document.createElement('script');
+      mfeRuntime.type = "text/javascript";
+      mfeRuntime.src = hostname + "/runtime.js";
+      mfeRuntime.async = true;
+      document.head.appendChild(mfeRuntime);
+      let mfeMain = document.createElement('script');
+      mfeMain.type = "text/javascript";
+      mfeMain.src = hostname + "/main.js";
+      mfeMain.async = true;
+      document.head.appendChild(mfeMain);
+    }
+
+    addMFE();
+  </script>
+</head>
+
+<body>
+  <app-root></app-root>
+</body>
+
+</html>

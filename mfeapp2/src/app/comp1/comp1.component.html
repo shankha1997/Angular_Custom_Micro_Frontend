@@ -1,0 +1,21 @@
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Completed</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of data">
+            <td>{{item.id}}</td>
+            <td>{{item.title}}</td>
+            <td>{{item.completed}}</td>
+        </tr>
+        <!-- <tr class="active-row">
+            <td>Melissa</td>
+            <td>5150</td>
+        </tr> -->
+        <!-- and so on... -->
+    </tbody>
+</table>
