@@ -15,9 +15,7 @@ export class Comp1Component implements OnInit{
   ngOnInit(): void {
     this.apiSrc.getData().subscribe((data : any) => {
       this.apiSrc.transferedData = data;
-      this.componentData = {
-        apisrc : this.apiSrc
-      };
+      this.componentData = data;
     })
   }
 

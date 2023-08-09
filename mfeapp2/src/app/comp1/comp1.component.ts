@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CableService } from '../cable.service';
 import { ApiService } from '../api.service';
 
@@ -8,14 +8,14 @@ import { ApiService } from '../api.service';
   styleUrls: ['./comp1.component.scss']
 })
 export class Comp1Component implements OnInit{
-  public data : any;
+  @Input() public data : any;
   constructor(private cableSrc : ApiService) {
     
   }
 
   ngOnInit() {
-    console.log("this.cableSrc.transferedData;",this.cableSrc.transferedData);
+    console.log("this.cableSrc.transferedData;",this.data);
     
-    this.data = this.cableSrc.transferedData;
+    // this.data = this.cableSrc.transferedData;
   }
 }

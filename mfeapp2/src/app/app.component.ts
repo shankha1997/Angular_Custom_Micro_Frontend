@@ -27,7 +27,7 @@ export class AppComponent implements OnChanges {
   private observer (data : any) {
     if(Object.keys(data).length !== 0){
       this.showUi = true;
-      this.cableSrc.transferedData = data.apisrc.transferedData;
+      this.data = data;
     }
   }
 
