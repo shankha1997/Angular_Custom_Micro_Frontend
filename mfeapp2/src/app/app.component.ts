@@ -1,6 +1,4 @@
 import { Component, ViewChild, ElementRef, OnInit, OnChanges, SimpleChanges, Input, ChangeDetectorRef } from '@angular/core';
-import { CableService } from './cable.service';
-import { ApiService } from './api.service';
 
 @Component({
   templateUrl: './app.component.html',
@@ -13,7 +11,7 @@ export class AppComponent implements OnChanges {
   public containerEle : any = null;
   public showUi : boolean = false;
 
-  constructor(private cd : ChangeDetectorRef, private cableSrc : ApiService){
+  constructor(private cd : ChangeDetectorRef){
 
   }
   
