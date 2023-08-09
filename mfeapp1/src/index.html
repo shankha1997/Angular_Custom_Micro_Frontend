@@ -12,7 +12,11 @@
       let hostname = "";
       console.log("Hostname", location.hostname);
       console.log("Window Hostname", window.location.origin);
-      hostname = "http://127.0.0.1:8080";
+      if(location.hostname === "localhost") {
+        hostname = "http://127.0.0.1:8080";
+      } else if (location.hostname.includes("netlify")) {
+        hostname = "https://beamish-taiyaki-905df8.netlify.app";
+      }
       let mfeRuntime = document.createElement('script');
       mfeRuntime.type = "text/javascript";
       mfeRuntime.src = hostname + "/runtime.js";

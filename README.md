@@ -10,3 +10,6 @@ Run `npm i -g http-server` to install the developmet server
 Run `ng build` in `mfeapp2` to build. After build, inside `dist/mfeapp2`, open terminal and run `http-server`
 
 # Refresh the project
+
+# Refer to this URL to see the live demo
+`https://harmonious-pasca-c549c7.netlify.app/`
