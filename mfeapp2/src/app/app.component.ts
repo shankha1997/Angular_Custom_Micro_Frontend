@@ -1,4 +1,5 @@
 import { Component, ViewChild, ElementRef, OnInit, OnChanges, SimpleChanges, Input, ChangeDetectorRef } from '@angular/core';
+import { VersionCheckService } from './services/version-check.service';
 
 @Component({
   templateUrl: './app.component.html',
@@ -11,8 +12,8 @@ export class AppComponent implements OnChanges {
   public containerEle : any = null;
   public showUi : boolean = false;
 
-  constructor(private cd : ChangeDetectorRef){
-
+  constructor(private cd : ChangeDetectorRef, private versionCheckService : VersionCheckService){
+    this.versionCheckService.initVersionCheck('http://localhost:3000/mfeversion');
   }
   
   ngOnChanges(changes: SimpleChanges) : void {
