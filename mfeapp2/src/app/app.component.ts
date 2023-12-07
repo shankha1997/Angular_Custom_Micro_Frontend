@@ -13,7 +13,10 @@ export class AppComponent implements OnChanges {
   public showUi : boolean = false;
 
   constructor(private cd : ChangeDetectorRef, private versionCheckService : VersionCheckService){
-    this.versionCheckService.initVersionCheck('http://localhost:3000/mfeversion');
+    this.versionCheckService.counting = setInterval(()=> {
+      this.versionCheckService.initVersionCheck('http://localhost:3000/mfeversion');
+    },500)
+    
   }
   
   ngOnChanges(changes: SimpleChanges) : void {

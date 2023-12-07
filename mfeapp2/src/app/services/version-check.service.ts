@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class VersionCheckService {
   // this will be replaced by actual hash post-build.js
   private currentHash = '{{POST_BUILD_ENTERS_HASH_HERE}}';
+  public counting : any;
 
   constructor(private http: HttpClient) { }
 
@@ -32,6 +33,8 @@ export class VersionCheckService {
 
       // If new version, do something
       if (hashChanged) {
+        console.log("Update required");
+        clearInterval(this.counting);
         // ENTER YOUR CODE TO DO SOMETHING UPON VERSION CHANGE
         // for an example: location.reload();
       }
